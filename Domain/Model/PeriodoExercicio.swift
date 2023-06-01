@@ -1,6 +1,6 @@
 import Foundation
 
-public struct PeriodoExercicio {
+public struct PeriodoExercicio: Model {
     
     //MARK: Properties
     let siglaUFRepresentacao: String?
@@ -20,6 +20,16 @@ public struct PeriodoExercicio {
         self.idCausaFimExercicio = idCausaFimExercicio
         self.descricaoCausaFimExercicio = descricaoCausaFimExercicio
         self.idCadastroParlamentarAnterior = idCadastroParlamentarAnterior
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case siglaUFRepresentacao
+        case situacaoExercicio
+        case dataInicio
+        case dataFim
+        case idCausaFimExercicio
+        case descricaoCausaFimExercicio
+        case idCadastroParlamentarAnterior
     }
     
 }

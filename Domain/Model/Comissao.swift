@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Comissao {
+public struct Comissao: Model {
     
     //MARK: Properties
     let idOrgaoLegislativoCD: Int?
@@ -18,6 +18,15 @@ public struct Comissao {
         self.condicaoMembro = condicaoMembro
         self.dataEntrada = dataEntrada
         self.dataSaida = dataSaida
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case idOrgaoLegislativoCD
+        case siglaComissao
+        case nomeComissao
+        case condicaoMembro
+        case dataEntrada
+        case dataSaida
     }
 }
 

@@ -1,5 +1,5 @@
 import Foundation
 
-public protocol GetDeputados {
+public protocol GetDeputadosProtocol {
     func getDeputados(completion: @escaping (Result<[Deputado], DomainError>) -> Void)
 }

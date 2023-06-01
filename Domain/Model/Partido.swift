@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Partido {
+public struct Partido: Model {
     
     //MARK: Properties
     let id: Int?
@@ -13,5 +13,12 @@ public struct Partido {
         self.sigla = sigla
         self.nome = nome
     }
+    
+    private enum CodingKeys: String, CodingKey {
+        case id
+        case sigla
+        case nome
+    }
+
     
 }

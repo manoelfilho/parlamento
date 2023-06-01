@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ItemHistoricoLider {
+public struct ItemHistoricoLider: Model {
     
     //MARK: Properties
     let idHistoricoLider: String?
@@ -24,6 +24,18 @@ public struct ItemHistoricoLider {
         self.codigoUnidadeLideranca = codigoUnidadeLideranca
         self.siglaUnidadeLideranca = siglaUnidadeLideranca
         self.idBlocoPartido = idBlocoPartido
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case idHistoricoLider
+        case idCargoLideranca
+        case descricaoCargoLideranca
+        case numOrdemCargo
+        case dataDesignacao
+        case dataTermino
+        case codigoUnidadeLideranca
+        case siglaUnidadeLideranca
+        case idBlocoPartido
     }
     
 }

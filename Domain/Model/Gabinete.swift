@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Gabinete {
+public struct Gabinete: Model {
     
     //MARK: Properties
     let numero: Int?
@@ -12,5 +12,11 @@ public struct Gabinete {
         self.numero = numero
         self.anexo = anexo
         self.telefone = telefone
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case numero
+        case anexo
+        case telefone
     }
 }

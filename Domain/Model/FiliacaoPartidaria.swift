@@ -1,6 +1,6 @@
 import Foundation
 
-public struct FiliacaoPartidaria {
+public struct FiliacaoPartidaria: Model {
     
     //MARK: Properties
     let idPartidoAnterior: Int?
@@ -23,5 +23,14 @@ public struct FiliacaoPartidaria {
         self.dataFiliacaoPartidoPosterior = dataFiliacaoPartidoPosterior
     }
     
+    private enum CodingKeys: String, CodingKey {
+        case idPartidoAnterior
+        case siglaPartidoAnterior
+        case nomePartidoAnterior
+        case idPartidoPosterior
+        case siglaPartidoPosterior
+        case nomePartidoPosterior
+        case dataFiliacaoPartidoPosterior
+    }
 }
 

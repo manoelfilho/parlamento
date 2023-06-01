@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Deputado {
+public struct Deputado: Model {    
     
     //MARK: Properties
     let numLegislatura: Int?
@@ -70,5 +70,41 @@ public struct Deputado {
         self.filiacoesPartidarias = filiacoesPartidarias
         self.historicoLider = historicoLider
     }
+    
+    
+    private enum CodingKeys: String, CodingKey {
+        case numLegislatura
+        case email
+        case nomeProfissao
+        case dataNascimento
+        case dataFalecimento
+        case ufRepresentacaoAtual
+        case situacaoNaLegislaturaAtual
+        case ideCadastro
+        case idParlamentarDeprecated
+        case nomeParlamentarAtual
+        case nomeCivil
+        case sexo
+        case codOrcamento
+        case condicao
+        case matricula
+        case idParlamentar
+        case nome
+        case nomeParlamentar
+        case urlFoto
+        case uf
+        case partido
+        case anexo
+        case fone
+        case partidoAtual
+        case gabinete
+        case comissoes
+        case cargosComissoes
+        case periodosExercicio
+        case historicoNomeParlamentar
+        case filiacoesPartidarias
+        case historicoLider
+    }
+
 }
 
