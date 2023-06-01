@@ -17,6 +17,7 @@
 		BB2CD0A92A29357800EA736B /* ItemHistoricoLider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0A82A29357800EA736B /* ItemHistoricoLider.swift */; };
 		BB2CD0AC2A293A2B00EA736B /* GetDeputados.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0AB2A293A2B00EA736B /* GetDeputados.swift */; };
 		BB2CD0AE2A293A9800EA736B /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0AD2A293A9800EA736B /* DomainError.swift */; };
+		BB2CD0B12A293BA200EA736B /* GetDeputado.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0B02A293BA200EA736B /* GetDeputado.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		BB2CD0A82A29357800EA736B /* ItemHistoricoLider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHistoricoLider.swift; sourceTree = "<group>"; };
 		BB2CD0AB2A293A2B00EA736B /* GetDeputados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeputados.swift; sourceTree = "<group>"; };
 		BB2CD0AD2A293A9800EA736B /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
+		BB2CD0B02A293BA200EA736B /* GetDeputado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeputado.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2CD0AB2A293A2B00EA736B /* GetDeputados.swift */,
+				BB2CD0B02A293BA200EA736B /* GetDeputado.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				BB2CD0AE2A293A9800EA736B /* DomainError.swift in Sources */,
 				BB2CD0A72A2934D800EA736B /* FiliacaoPartidaria.swift in Sources */,
 				BB2CD09A2A29206700EA736B /* Deputado.swift in Sources */,
+				BB2CD0B12A293BA200EA736B /* GetDeputado.swift in Sources */,
 				BB2CD09F2A29230F00EA736B /* Gabinete.swift in Sources */,
 				BB2CD0A92A29357800EA736B /* ItemHistoricoLider.swift in Sources */,
 				BB2CD0A52A2930F500EA736B /* PeriodoExercicio.swift in Sources */,
