@@ -5,13 +5,13 @@ final class GetDeputadoTest: XCTestCase {
 
     func test_get_should_call_http_get_client_with_correct_url(){
         let url: URL = URL(string: "http://any-url")!
-        let (sut, httpGetClientSpy) = makeSut()
+        let (sut, httpGetClientSpy) = makeSutRemoteGetDeputado()
         sut.getDeputado { _ in }
         XCTAssertEqual(url, httpGetClientSpy.url)
     }
     
     func test_get_should_complete_with_deputado_if_clients_completes_with_valid_data(){
-        let (sut, httpGetClientSpy) = makeSut()
+        let (sut, httpGetClientSpy) = makeSutRemoteGetDeputado()
         let exp = expectation(description: "waiting")
         
         let expectedDeputado = makeDeputado()
@@ -29,12 +29,41 @@ final class GetDeputadoTest: XCTestCase {
         wait(for: [exp], timeout: 1)
         
     }
+    
+    func test_get_should_complete_with_deputados_if_clients_completes_with_valid_data(){
+        let (sut, httpGetClientSpy) = makeSutRemoteGetDeputados()
+        let exp = expectation(description: "waiting")
+        
+        let expectedDeputados = makeDeputados()
+        
+        sut.getDeputados { result in
+            switch result {
+                case .failure: XCTFail("Expected deputados and receive a result \(result) instead")
+                case .success(let receivedDeputados): XCTAssertEqual(receivedDeputados, expectedDeputados)
+            }
+            exp.fulfill()
+        }
+        
+        httpGetClientSpy.completeWithData(makeDeputadosDataXml())
+        
+        wait(for: [exp], timeout: 1)
+        
+    }
 
 }
 
 extension GetDeputadoTest {
     
-    func makeSut(url: URL = URL(string: "http://any-url")!) -> (sut: RemoteGetDeputado, httpClientSpy: HttpGetClientSpy){
+    func makeSutRemoteGetDeputados(url: URL = URL(string: "http://any-url")!) -> (sut: RemoteGetDeputados, httpClientSpy: HttpGetClientSpy){
+        let httpClientSpy = HttpGetClientSpy()
+        let sut = RemoteGetDeputados(url: url, httpClient: httpClientSpy)
+        addTeardownBlock { [weak sut] in
+            XCTAssertNil(sut)
+        }
+        return (sut, httpClientSpy)
+    }
+    
+    func makeSutRemoteGetDeputado(url: URL = URL(string: "http://any-url")!) -> (sut: RemoteGetDeputado, httpClientSpy: HttpGetClientSpy){
         let httpClientSpy = HttpGetClientSpy()
         let sut = RemoteGetDeputado(url: url, httpClient: httpClientSpy)
         addTeardownBlock { [weak sut] in

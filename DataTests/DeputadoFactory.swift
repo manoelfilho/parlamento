@@ -50,9 +50,17 @@ func makeDeputado() -> Deputado {
 }
 
 func makeCollectionDeputados() -> [Deputado] {
-    return [makeDeputado()]
+    return [makeDeputado(), makeDeputado(), makeDeputado()]
+}
+
+func makeDeputados() -> Deputados {
+    return Deputados(deputado: makeCollectionDeputados())
 }
 
 func makeDeputadoDataXml() -> Data {
     return try! XMLEncoder().encode(makeDeputado())
+}
+
+func makeDeputadosDataXml() -> Data {
+    return try! XMLEncoder().encode(Deputados(deputado: makeCollectionDeputados()))
 }

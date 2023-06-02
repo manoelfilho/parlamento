@@ -34,6 +34,7 @@
 		BB2CD0FF2A294FB800EA736B /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */; };
 		BB2CD10B2A29569C00EA736B /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = BB2CD10A2A29569C00EA736B /* XMLCoder */; };
 		BB2CD10E2A295C3F00EA736B /* DeputadoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */; };
+		BB2CD1122A299F8C00EA736B /* RemoteGetDeputados.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD1112A299F8C00EA736B /* RemoteGetDeputados.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		BB2CD0F02A294F2E00EA736B /* InfraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTests.swift; sourceTree = "<group>"; };
 		BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
 		BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputadoFactory.swift; sourceTree = "<group>"; };
+		BB2CD1112A299F8C00EA736B /* RemoteGetDeputados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteGetDeputados.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2CD0D02A293E9E00EA736B /* RemoteGetDeputado.swift */,
+				BB2CD1112A299F8C00EA736B /* RemoteGetDeputados.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				BB2CD0DC2A2942FC00EA736B /* ExtensionsData.swift in Sources */,
 				BB2CD0CE2A293E5200EA736B /* HttpError.swift in Sources */,
 				BB2CD0DA2A29416C00EA736B /* HttpGetClient.swift in Sources */,
+				BB2CD1122A299F8C00EA736B /* RemoteGetDeputados.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

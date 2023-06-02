@@ -2,7 +2,7 @@ import Foundation
 
 public struct Deputado: Model {
     
-    //MARK: Properties
+    //MARK: Deputado Properties
     let numLegislatura: Int?
     let email: String?
     let nomeProfissao: String?
@@ -37,7 +37,7 @@ public struct Deputado: Model {
     let historicoLider: HistoricoLider
     
     
-    //MARK: Initializer
+    //MARK: Deputado Initializer
     public init(numLegislatura: Int?, email: String?, nomeProfissao: String?, dataNascimento: String?, dataFalecimento: String?, ufRepresentacaoAtual: String?, situacaoNaLegislaturaAtual: String?, ideCadastro: Int?, idParlamentarDeprecated: Int?, nomeParlamentarAtual: String?, nomeCivil: String?, sexo: String?, codOrcamento: Int?, condicao: String?, matricula: Int?, idParlamentar: Int?, nome: String?, nomeParlamentar: String?, urlFoto: String?, uf: String?, partido: String?, anexo: Int?, fone: String?, partidoAtual: Partido?, gabinete: Gabinete?, comissoes: Comissoes, cargosComissoes: CargosComissoes, periodosExercicio: PeriodosExercicio, historicoNomeParlamentar: [String], filiacoesPartidarias: FiliacoesPartidarias, historicoLider: HistoricoLider) {
         self.numLegislatura = numLegislatura
         self.email = email
@@ -107,6 +107,16 @@ public struct Deputado: Model {
         case historicoLider
     }
     
+}
+
+public struct Deputados: Model {
+    var deputado: [Deputado]
+    public init(deputado: [Deputado]) {
+        self.deputado = deputado
+    }
+    private enum CodingKeys: String, CodingKey {
+        case deputado
+    }
     
 }
 
@@ -115,12 +125,18 @@ public struct Comissoes: Model {
     public init(comissao: [Comissao]) {
         self.comissao = comissao
     }
+    private enum CodingKeys: String, CodingKey {
+        case comissao
+    }
 }
 
 public struct CargosComissoes: Model {
     let cargoComissoes: [CargoComissoes]
     public init(cargoComissoes: [CargoComissoes]) {
         self.cargoComissoes = cargoComissoes
+    }
+    private enum CodingKeys: String, CodingKey {
+        case cargoComissoes
     }
 }
 
@@ -129,6 +145,9 @@ public struct PeriodosExercicio: Model {
     public init(periodoExercicio: [PeriodoExercicio]) {
         self.periodoExercicio = periodoExercicio
     }
+    private enum CodingKeys: String, CodingKey {
+        case periodoExercicio
+    }
 }
 
 public struct FiliacoesPartidarias: Model {
@@ -136,12 +155,18 @@ public struct FiliacoesPartidarias: Model {
     public init(filiacaoPartidaria: [FiliacaoPartidaria]) {
         self.filiacaoPartidaria = filiacaoPartidaria
     }
+    private enum CodingKeys: String, CodingKey {
+        case filiacaoPartidaria
+    }
 }
 
 public struct HistoricoLider: Model {
     let itemHistoricoLider: [ItemHistoricoLider]
     public init(itemHistoricoLider: [ItemHistoricoLider]) {
         self.itemHistoricoLider = itemHistoricoLider
+    }
+    private enum CodingKeys: String, CodingKey {
+        case itemHistoricoLider
     }
 }
 
