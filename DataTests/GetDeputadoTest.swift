@@ -23,7 +23,7 @@ final class GetDeputadoTest: XCTestCase {
             }
             exp.fulfill()
         }
-        httpGetClientSpy.completeWithData(makeCollectionDeputadosToDataXml())
+        httpGetClientSpy.completeWithData(makeDeputadoDataXml())
         wait(for: [exp], timeout: 1)
         
     }

@@ -53,10 +53,6 @@ func makeCollectionDeputados() -> [Deputado] {
     return [makeDeputado()]
 }
 
-func makeCollectionDeputadosToDataJson() -> Data {
-    return try! JSONEncoder().encode(makeCollectionDeputados())
-}
-
-func makeCollectionDeputadosToDataXml() -> Data {
+func makeDeputadoDataXml() -> Data {
     return try! XMLEncoder().encode(makeDeputado())
 }
