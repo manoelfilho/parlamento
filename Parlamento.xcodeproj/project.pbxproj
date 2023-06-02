@@ -246,8 +246,8 @@
 		BB2CD0C22A293C2D00EA736B /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */,
 				BB2CD10C2A295BEB00EA736B /* Factories */,
+				BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
