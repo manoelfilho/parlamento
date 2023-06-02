@@ -3,10 +3,10 @@ import Foundation
 public struct ItemHistoricoLider: Model {
     
     //MARK: Properties
-    let idHistoricoLider: String?
-    let idCargoLideranca: String?
+    let idHistoricoLider: Int?
+    let idCargoLideranca: Int?
     let descricaoCargoLideranca: String?
-    let numOrdemCargo: String?
+    let numOrdemCargo: Int?
     let dataDesignacao: String?
     let dataTermino: String?
     let codigoUnidadeLideranca: String?
@@ -14,7 +14,7 @@ public struct ItemHistoricoLider: Model {
     let idBlocoPartido: String?
     
     //MARK: Init
-    public init(idHistoricoLider: String?, idCargoLideranca: String?, descricaoCargoLideranca: String?, numOrdemCargo: String?, dataDesignacao: String?, dataTermino: String?, codigoUnidadeLideranca: String?, siglaUnidadeLideranca: String?, idBlocoPartido: String?) {
+    public init(idHistoricoLider: Int?, idCargoLideranca: Int?, descricaoCargoLideranca: String?, numOrdemCargo: Int?, dataDesignacao: String?, dataTermino: String?, codigoUnidadeLideranca: String?, siglaUnidadeLideranca: String?, idBlocoPartido: String?) {
         self.idHistoricoLider = idHistoricoLider
         self.idCargoLideranca = idCargoLideranca
         self.descricaoCargoLideranca = descricaoCargoLideranca

@@ -19,7 +19,7 @@
 		BB2CD0AE2A293A9800EA736B /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0AD2A293A9800EA736B /* DomainError.swift */; };
 		BB2CD0B12A293BA200EA736B /* GetDeputado.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0B02A293BA200EA736B /* GetDeputado.swift */; };
 		BB2CD0BF2A293C2D00EA736B /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0B72A293C2C00EA736B /* Data.framework */; };
-		BB2CD0C42A293C2D00EA736B /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0C32A293C2D00EA736B /* DataTests.swift */; };
+		BB2CD0C42A293C2D00EA736B /* GetDeputadoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */; };
 		BB2CD0CE2A293E5200EA736B /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0CD2A293E5200EA736B /* HttpError.swift */; };
 		BB2CD0D12A293E9E00EA736B /* RemoteGetDeputado.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0D02A293E9E00EA736B /* RemoteGetDeputado.swift */; };
 		BB2CD0D32A293ED900EA736B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0922A29201700EA736B /* Domain.framework */; };
@@ -29,6 +29,11 @@
 		BB2CD0DE2A29435500EA736B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0DD2A29435500EA736B /* Model.swift */; };
 		BB2CD0EC2A294F2E00EA736B /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0E42A294F2D00EA736B /* Infra.framework */; };
 		BB2CD0F12A294F2E00EA736B /* InfraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0F02A294F2E00EA736B /* InfraTests.swift */; };
+		BB2CD0F92A294F6D00EA736B /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0B72A293C2C00EA736B /* Data.framework */; };
+		BB2CD0FA2A294F6D00EA736B /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0B72A293C2C00EA736B /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB2CD0FF2A294FB800EA736B /* URLSessionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */; };
+		BB2CD10B2A29569C00EA736B /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = BB2CD10A2A29569C00EA736B /* XMLCoder */; };
+		BB2CD10E2A295C3F00EA736B /* DeputadoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,13 @@
 			remoteGlobalIDString = BB2CD0E32A294F2D00EA736B;
 			remoteInfo = Infra;
 		};
+		BB2CD0FB2A294F6D00EA736B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB2CD07A2A291FE200EA736B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB2CD0B62A293C2C00EA736B;
+			remoteInfo = Data;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +75,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BB2CD0D42A293ED900EA736B /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2CD0FD2A294F6E00EA736B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BB2CD0FA2A294F6D00EA736B /* Data.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +107,7 @@
 		BB2CD0B02A293BA200EA736B /* GetDeputado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeputado.swift; sourceTree = "<group>"; };
 		BB2CD0B72A293C2C00EA736B /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2CD0BE2A293C2D00EA736B /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB2CD0C32A293C2D00EA736B /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeputadoTest.swift; sourceTree = "<group>"; };
 		BB2CD0CD2A293E5200EA736B /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		BB2CD0D02A293E9E00EA736B /* RemoteGetDeputado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetDeputado.swift; sourceTree = "<group>"; };
 		BB2CD0D92A29416C00EA736B /* HttpGetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGetClient.swift; sourceTree = "<group>"; };
@@ -93,6 +116,8 @@
 		BB2CD0E42A294F2D00EA736B /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2CD0EB2A294F2D00EA736B /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2CD0F02A294F2E00EA736B /* InfraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraTests.swift; sourceTree = "<group>"; };
+		BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
+		BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputadoFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2CD10B2A29569C00EA736B /* XMLCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2CD0F92A294F6D00EA736B /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +246,8 @@
 		BB2CD0C22A293C2D00EA736B /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB2CD0C32A293C2D00EA736B /* DataTests.swift */,
+				BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */,
+				BB2CD10C2A295BEB00EA736B /* Factories */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -258,6 +286,7 @@
 		BB2CD0E52A294F2D00EA736B /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -268,6 +297,14 @@
 				BB2CD0F02A294F2E00EA736B /* InfraTests.swift */,
 			);
 			path = InfraTests;
+			sourceTree = "<group>";
+		};
+		BB2CD10C2A295BEB00EA736B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */,
+			);
+			name = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +348,9 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				BB2CD10A2A29569C00EA736B /* XMLCoder */,
+			);
 			productName = Domain;
 			productReference = BB2CD0922A29201700EA736B /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -331,6 +371,8 @@
 				BB2CD0D62A293ED900EA736B /* PBXTargetDependency */,
 			);
 			name = Data;
+			packageProductDependencies = (
+			);
 			productName = Data;
 			productReference = BB2CD0B72A293C2C00EA736B /* Data.framework */;
 			productType = "com.apple.product-type.framework";
@@ -361,12 +403,16 @@
 				BB2CD0E02A294F2D00EA736B /* Sources */,
 				BB2CD0E12A294F2D00EA736B /* Frameworks */,
 				BB2CD0E22A294F2D00EA736B /* Resources */,
+				BB2CD0FD2A294F6E00EA736B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB2CD0FC2A294F6D00EA736B /* PBXTargetDependency */,
 			);
 			name = Infra;
+			packageProductDependencies = (
+			);
 			productName = Infra;
 			productReference = BB2CD0E42A294F2D00EA736B /* Infra.framework */;
 			productType = "com.apple.product-type.framework";
@@ -412,6 +458,7 @@
 					};
 					BB2CD0E32A294F2D00EA736B = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					BB2CD0EA2A294F2D00EA736B = {
 						CreatedOnToolsVersion = 14.3;
@@ -427,6 +474,9 @@
 				Base,
 			);
 			mainGroup = BB2CD0792A291FE200EA736B;
+			packageReferences = (
+				BB2CD1092A29569C00EA736B /* XCRemoteSwiftPackageReference "XMLCoder" */,
+			);
 			productRefGroup = BB2CD0842A291FE200EA736B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -513,7 +563,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB2CD0C42A293C2D00EA736B /* DataTests.swift in Sources */,
+				BB2CD10E2A295C3F00EA736B /* DeputadoFactory.swift in Sources */,
+				BB2CD0C42A293C2D00EA736B /* GetDeputadoTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB2CD0FF2A294FB800EA736B /* URLSessionAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +601,11 @@
 			isa = PBXTargetDependency;
 			target = BB2CD0E32A294F2D00EA736B /* Infra */;
 			targetProxy = BB2CD0ED2A294F2E00EA736B /* PBXContainerItemProxy */;
+		};
+		BB2CD0FC2A294F6D00EA736B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB2CD0B62A293C2C00EA736B /* Data */;
+			targetProxy = BB2CD0FB2A294F6D00EA736B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -847,6 +904,7 @@
 		BB2CD0F32A294F2E00EA736B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -870,7 +928,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.eti.manoelfilho.parlamento.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -878,6 +938,7 @@
 		BB2CD0F42A294F2E00EA736B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -901,6 +962,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.eti.manoelfilho.parlamento.Infra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -909,6 +971,7 @@
 		BB2CD0F52A294F2E00EA736B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
@@ -924,6 +987,7 @@
 		BB2CD0F62A294F2E00EA736B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56EQ48SVZJ;
@@ -994,6 +1058,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB2CD1092A29569C00EA736B /* XCRemoteSwiftPackageReference "XMLCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/XMLCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.17.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB2CD10A2A29569C00EA736B /* XMLCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB2CD1092A29569C00EA736B /* XCRemoteSwiftPackageReference "XMLCoder" */;
+			productName = XMLCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB2CD07A2A291FE200EA736B /* Project object */;
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Deputado: Model {    
+public struct Deputado: Model {
     
     //MARK: Properties
     let numLegislatura: Int?
@@ -105,6 +105,6 @@ public struct Deputado: Model {
         case filiacoesPartidarias
         case historicoLider
     }
-
+    
 }
 

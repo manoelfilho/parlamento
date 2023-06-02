@@ -12,7 +12,7 @@ public struct CargoComissoes: Model {
     let dataSaida: String?
     
     //MARK: Init
-    init(idOrgaoLegislativoCD: Int?, siglaComissao: String?, nomeComissao: String?, idCargo: Int?, nomeCargo: String?, dataEntrada: String?, dataSaida: String?) {
+    public init(idOrgaoLegislativoCD: Int?, siglaComissao: String?, nomeComissao: String?, idCargo: Int?, nomeCargo: String?, dataEntrada: String?, dataSaida: String?) {
         self.idOrgaoLegislativoCD = idOrgaoLegislativoCD
         self.siglaComissao = siglaComissao
         self.nomeComissao = nomeComissao
