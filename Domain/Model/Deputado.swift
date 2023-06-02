@@ -29,15 +29,16 @@ public struct Deputado: Model {
     
     let partidoAtual: Partido?
     let gabinete: Gabinete?
-    let comissoes: [Comissao]
-    let cargosComissoes: [CargoComissoes]
-    let periodosExercicio: [PeriodoExercicio]
+    let comissoes: Comissoes
+    let cargosComissoes: CargosComissoes
+    let periodosExercicio: PeriodosExercicio
     let historicoNomeParlamentar: [String]
-    let filiacoesPartidarias: [FiliacaoPartidaria]
-    let historicoLider: [ItemHistoricoLider]
+    let filiacoesPartidarias: FiliacoesPartidarias
+    let historicoLider: HistoricoLider
+    
     
     //MARK: Initializer
-    public init(numLegislatura: Int?, email: String?, nomeProfissao: String?, dataNascimento: String?, dataFalecimento: String?, ufRepresentacaoAtual: String?, situacaoNaLegislaturaAtual: String?, ideCadastro: Int?, idParlamentarDeprecated: Int?, nomeParlamentarAtual: String?, nomeCivil: String?, sexo: String?, codOrcamento: Int?, condicao: String?, matricula: Int?, idParlamentar: Int?, nome: String?, nomeParlamentar: String?, urlFoto: String?, uf: String?, partido: String?, anexo: Int?, fone: String?, partidoAtual: Partido?, gabinete: Gabinete?, comissoes: [Comissao], cargosComissoes: [CargoComissoes], periodosExercicio: [PeriodoExercicio], historicoNomeParlamentar: [String], filiacoesPartidarias: [FiliacaoPartidaria], historicoLider: [ItemHistoricoLider]) {
+    public init(numLegislatura: Int?, email: String?, nomeProfissao: String?, dataNascimento: String?, dataFalecimento: String?, ufRepresentacaoAtual: String?, situacaoNaLegislaturaAtual: String?, ideCadastro: Int?, idParlamentarDeprecated: Int?, nomeParlamentarAtual: String?, nomeCivil: String?, sexo: String?, codOrcamento: Int?, condicao: String?, matricula: Int?, idParlamentar: Int?, nome: String?, nomeParlamentar: String?, urlFoto: String?, uf: String?, partido: String?, anexo: Int?, fone: String?, partidoAtual: Partido?, gabinete: Gabinete?, comissoes: Comissoes, cargosComissoes: CargosComissoes, periodosExercicio: PeriodosExercicio, historicoNomeParlamentar: [String], filiacoesPartidarias: FiliacoesPartidarias, historicoLider: HistoricoLider) {
         self.numLegislatura = numLegislatura
         self.email = email
         self.nomeProfissao = nomeProfissao
@@ -106,5 +107,42 @@ public struct Deputado: Model {
         case historicoLider
     }
     
+    
 }
+
+public struct Comissoes: Model {
+    let comissao: [Comissao]
+    public init(comissao: [Comissao]) {
+        self.comissao = comissao
+    }
+}
+
+public struct CargosComissoes: Model {
+    let cargoComissoes: [CargoComissoes]
+    public init(cargoComissoes: [CargoComissoes]) {
+        self.cargoComissoes = cargoComissoes
+    }
+}
+
+public struct PeriodosExercicio: Model {
+    let periodoExercicio: [PeriodoExercicio]
+    public init(periodoExercicio: [PeriodoExercicio]) {
+        self.periodoExercicio = periodoExercicio
+    }
+}
+
+public struct FiliacoesPartidarias: Model {
+    let filiacaoPartidaria: [FiliacaoPartidaria]
+    public init(filiacaoPartidaria: [FiliacaoPartidaria]) {
+        self.filiacaoPartidaria = filiacaoPartidaria
+    }
+}
+
+public struct HistoricoLider: Model {
+    let itemHistoricoLider: [ItemHistoricoLider]
+    public init(itemHistoricoLider: [ItemHistoricoLider]) {
+        self.itemHistoricoLider = itemHistoricoLider
+    }
+}
+
 

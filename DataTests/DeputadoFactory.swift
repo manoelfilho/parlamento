@@ -37,12 +37,12 @@ func makeDeputado() -> Deputado {
         fone: "1234567890",
         partidoAtual: partidoAtual,
         gabinete: gabinete,
-        comissoes: [comissao],
-        cargosComissoes: [cargoComissoes],
-        periodosExercicio: [periodoExercicio],
+        comissoes: Comissoes(comissao: [comissao, comissao]),
+        cargosComissoes: CargosComissoes(cargoComissoes: [cargoComissoes, cargoComissoes]),
+        periodosExercicio: PeriodosExercicio(periodoExercicio: [periodoExercicio, periodoExercicio]),
         historicoNomeParlamentar: ["Name One, Name Two"],
-        filiacoesPartidarias: [filiacaoPartidaria],
-        historicoLider: [itemHistoricoLider]
+        filiacoesPartidarias: FiliacoesPartidarias(filiacaoPartidaria: [filiacaoPartidaria, filiacaoPartidaria]),
+        historicoLider: HistoricoLider(itemHistoricoLider: [itemHistoricoLider, itemHistoricoLider])
         
     )
     
