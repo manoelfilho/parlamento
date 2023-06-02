@@ -39,6 +39,8 @@ public final class RemoteGetDeputados: GetDeputadosProtocol {
                         completion(.failure(.apiError))
                     case .forbiden:
                         completion(.failure(.forbiden))
+                    case .serverError:
+                        completion(.failure(.serverError))
                 }
                 
             }

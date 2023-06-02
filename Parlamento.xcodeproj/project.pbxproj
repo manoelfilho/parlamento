@@ -35,6 +35,9 @@
 		BB2CD10B2A29569C00EA736B /* XMLCoder in Frameworks */ = {isa = PBXBuildFile; productRef = BB2CD10A2A29569C00EA736B /* XMLCoder */; };
 		BB2CD10E2A295C3F00EA736B /* DeputadoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */; };
 		BB2CD1122A299F8C00EA736B /* RemoteGetDeputados.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD1112A299F8C00EA736B /* RemoteGetDeputados.swift */; };
+		BB2CD1252A29A58200EA736B /* RemoteGetDeputadosTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD1242A29A58200EA736B /* RemoteGetDeputadosTest.swift */; };
+		BBF1245F2A29ABCC001F24FB /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF1245E2A29ABCC001F24FB /* AlamofireAdapter.swift */; };
+		BBF124622A29ABED001F24FB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BBF124612A29ABED001F24FB /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,9 @@
 		BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionAdapter.swift; sourceTree = "<group>"; };
 		BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputadoFactory.swift; sourceTree = "<group>"; };
 		BB2CD1112A299F8C00EA736B /* RemoteGetDeputados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteGetDeputados.swift; sourceTree = "<group>"; };
+		BB2CD11F2A29A58200EA736B /* IntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2CD1242A29A58200EA736B /* RemoteGetDeputadosTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetDeputadosTest.swift; sourceTree = "<group>"; };
+		BBF1245E2A29ABCC001F24FB /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2CD0F92A294F6D00EA736B /* Data.framework in Frameworks */,
+				BBF124622A29ABED001F24FB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2CD0EC2A294F2E00EA736B /* Infra.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2CD11C2A29A58200EA736B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +188,7 @@
 				BB2CD0C22A293C2D00EA736B /* DataTests */,
 				BB2CD0E52A294F2D00EA736B /* Infra */,
 				BB2CD0EF2A294F2E00EA736B /* InfraTests */,
+				BB2CD1232A29A58200EA736B /* IntegrationTests */,
 				BB2CD0842A291FE200EA736B /* Products */,
 				BB2CD0D22A293ED900EA736B /* Frameworks */,
 			);
@@ -187,6 +202,7 @@
 				BB2CD0BE2A293C2D00EA736B /* DataTests.xctest */,
 				BB2CD0E42A294F2D00EA736B /* Infra.framework */,
 				BB2CD0EB2A294F2D00EA736B /* InfraTests.xctest */,
+				BB2CD11F2A29A58200EA736B /* IntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2CD0FE2A294FB800EA736B /* URLSessionAdapter.swift */,
+				BBF1245E2A29ABCC001F24FB /* AlamofireAdapter.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -308,6 +325,14 @@
 				BB2CD10D2A295C3F00EA736B /* DeputadoFactory.swift */,
 			);
 			name = Factories;
+			sourceTree = "<group>";
+		};
+		BB2CD1232A29A58200EA736B /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB2CD1242A29A58200EA736B /* RemoteGetDeputadosTest.swift */,
+			);
+			path = IntegrationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +440,7 @@
 			);
 			name = Infra;
 			packageProductDependencies = (
+				BBF124612A29ABED001F24FB /* Alamofire */,
 			);
 			productName = Infra;
 			productReference = BB2CD0E42A294F2D00EA736B /* Infra.framework */;
@@ -436,6 +462,23 @@
 			name = InfraTests;
 			productName = InfraTests;
 			productReference = BB2CD0EB2A294F2D00EA736B /* InfraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB2CD11E2A29A58200EA736B /* IntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB2CD12A2A29A58200EA736B /* Build configuration list for PBXNativeTarget "IntegrationTests" */;
+			buildPhases = (
+				BB2CD11B2A29A58200EA736B /* Sources */,
+				BB2CD11C2A29A58200EA736B /* Frameworks */,
+				BB2CD11D2A29A58200EA736B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntegrationTests;
+			productName = IntegrationTestsTests;
+			productReference = BB2CD11F2A29A58200EA736B /* IntegrationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -466,6 +509,9 @@
 					BB2CD0EA2A294F2D00EA736B = {
 						CreatedOnToolsVersion = 14.3;
 					};
+					BB2CD11E2A29A58200EA736B = {
+						CreatedOnToolsVersion = 14.3;
+					};
 				};
 			};
 			buildConfigurationList = BB2CD07D2A291FE200EA736B /* Build configuration list for PBXProject "Parlamento" */;
@@ -479,6 +525,7 @@
 			mainGroup = BB2CD0792A291FE200EA736B;
 			packageReferences = (
 				BB2CD1092A29569C00EA736B /* XCRemoteSwiftPackageReference "XMLCoder" */,
+				BBF124602A29ABED001F24FB /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = BB2CD0842A291FE200EA736B /* Products */;
 			projectDirPath = "";
@@ -489,6 +536,7 @@
 				BB2CD0BD2A293C2D00EA736B /* DataTests */,
 				BB2CD0E32A294F2D00EA736B /* Infra */,
 				BB2CD0EA2A294F2D00EA736B /* InfraTests */,
+				BB2CD11E2A29A58200EA736B /* IntegrationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -523,6 +571,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BB2CD0E92A294F2D00EA736B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2CD11D2A29A58200EA736B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -576,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF1245F2A29ABCC001F24FB /* AlamofireAdapter.swift in Sources */,
 				BB2CD0FF2A294FB800EA736B /* URLSessionAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +641,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2CD0F12A294F2E00EA736B /* InfraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB2CD11B2A29A58200EA736B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2CD1252A29A58200EA736B /* RemoteGetDeputadosTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1068,36 @@
 			};
 			name = Release;
 		};
+		BB2CD12B2A29A58200EA736B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56EQ48SVZJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.eti.manoelfilho.parlamento.IntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BB2CD12C2A29A58200EA736B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56EQ48SVZJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.eti.manoelfilho.parlamento.IntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1061,6 +1155,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BB2CD12A2A29A58200EA736B /* Build configuration list for PBXNativeTarget "IntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB2CD12B2A29A58200EA736B /* Debug */,
+				BB2CD12C2A29A58200EA736B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -1072,6 +1175,14 @@
 				minimumVersion = 0.17.1;
 			};
 		};
+		BBF124602A29ABED001F24FB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1079,6 +1190,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB2CD1092A29569C00EA736B /* XCRemoteSwiftPackageReference "XMLCoder" */;
 			productName = XMLCoder;
+		};
+		BBF124612A29ABED001F24FB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBF124602A29ABED001F24FB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

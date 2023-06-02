@@ -19,7 +19,7 @@ public final class URLSessionAdapter: HttpGetClient {
                 
                 if let error = error { throw error }
                 
-                guard let httpResponse = urlResponse as? HTTPURLResponse, 200 ..< 300 ~= httpResponse.statusCode else {
+                guard let httpResponse = urlResponse as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
                     completion(.failure(.unexpected))
                     return
                 }

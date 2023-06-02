@@ -6,4 +6,5 @@ public enum DomainError: Error {
     case unauthorized
     case apiError
     case forbiden
+    case serverError
 }

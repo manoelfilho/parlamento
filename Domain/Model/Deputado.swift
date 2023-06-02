@@ -110,14 +110,16 @@ public struct Deputado: Model {
 }
 
 public struct Deputados: Model {
-    var deputado: [Deputado]
+    let deputado: [Deputado]
     public init(deputado: [Deputado]) {
         self.deputado = deputado
     }
     private enum CodingKeys: String, CodingKey {
         case deputado
     }
-    
+    public func getDeputados()->[Deputado]{
+        return self.deputado
+    }
 }
 
 public struct Comissoes: Model {
