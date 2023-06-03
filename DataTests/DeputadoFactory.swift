@@ -2,7 +2,7 @@ import Foundation
 import XMLCoder
 import Domain
 
-func makeDeputado() -> Deputado {
+public func makeDeputado() -> Deputado {
     let partidoAtual = Partido(id: 1, sigla: "PL", nome: "Partido Livre")
     let gabinete = Gabinete(numero: 1, anexo: 1, telefone: "9999999999")
     let comissao = Comissao(idOrgaoLegislativoCD: 1, siglaComissao: "SG", nomeComissao: "Nome Comissão", condicaoMembro: "Suplente", dataEntrada: "10/10/2000", dataSaida: "10/09/2001")
@@ -49,18 +49,18 @@ func makeDeputado() -> Deputado {
     return deputado
 }
 
-func makeCollectionDeputados() -> [Deputado] {
+public func makeCollectionDeputados() -> [Deputado] {
     return [makeDeputado(), makeDeputado(), makeDeputado()]
 }
 
-func makeDeputados() -> Deputados {
+public func makeDeputados() -> Deputados {
     return Deputados(deputado: makeCollectionDeputados())
 }
 
-func makeDeputadoDataXml() -> Data {
+public func makeDeputadoDataXml() -> Data {
     return try! XMLEncoder().encode(makeDeputado())
 }
 
-func makeDeputadosDataXml() -> Data {
+public func makeDeputadosDataXml() -> Data {
     return try! XMLEncoder().encode(Deputados(deputado: makeCollectionDeputados()))
 }

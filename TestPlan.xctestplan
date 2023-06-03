@@ -1,0 +1,40 @@
+{
+  "configurations" : [
+    {
+      "id" : "787780D7-674A-40E4-8FBD-E219A2B722BF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Parlamento.xcodeproj",
+        "identifier" : "BB2CD0BD2A293C2D00EA736B",
+        "name" : "DataTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Parlamento.xcodeproj",
+        "identifier" : "BB2CD0EA2A294F2D00EA736B",
+        "name" : "InfraTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Parlamento.xcodeproj",
+        "identifier" : "BB6824F92A2A74D400BE195C",
+        "name" : "PresenterTests"
+      }
+    }
+  ],
+  "version" : 1
+}

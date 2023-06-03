@@ -34,7 +34,7 @@ final class GetDeputadoTest: XCTestCase {
         let (sut, httpGetClientSpy) = makeSutRemoteGetDeputados()
         let exp = expectation(description: "waiting")
         
-        let expectedDeputados = makeDeputados()
+        let expectedDeputados = makeCollectionDeputados()
         
         sut.getDeputados { result in
             switch result {

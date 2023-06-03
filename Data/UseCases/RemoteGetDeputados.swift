@@ -2,7 +2,7 @@ import Foundation
 import Domain
 
 public final class RemoteGetDeputados: GetDeputadosProtocol {
-    
+
     private let url: URL
     private let httpClient: HttpGetClient
     
@@ -11,7 +11,7 @@ public final class RemoteGetDeputados: GetDeputadosProtocol {
         self.httpClient = httpClient
     }
     
-    public func getDeputados(completion: @escaping (Result<Deputados, DomainError>) -> Void) {
+    public func getDeputados(completion: @escaping (Result<[Deputado], DomainError>) -> Void) {
         
         httpClient.get(to: url) { [weak self] result in
             
@@ -21,7 +21,7 @@ public final class RemoteGetDeputados: GetDeputadosProtocol {
                 
             case .success(let data):
                 if let model: Deputados = data?.toModel() {
-                    completion(.success(model))
+                    completion(.success(model.getDeputados()))
                 } else {
                     completion(.failure(.unexpected))
                 }
