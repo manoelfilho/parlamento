@@ -15,7 +15,7 @@ final class RemoteGetDeputadosTest: XCTestCase {
             switch result {
                 case .failure: XCTFail("Expect succcess got \(result) instead")
                 case .success(let deputados):
-                    XCTAssertNotEqual(deputados.getDeputados().count, 0)
+                XCTAssertNotEqual(deputados.count, 0)
             }
             exp.fulfill()
         }

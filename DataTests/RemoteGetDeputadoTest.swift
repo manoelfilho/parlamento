@@ -1,7 +1,7 @@
 import XCTest
 import Data
 
-final class GetDeputadoTest: XCTestCase {
+final class RemoteGetDeputadoTest: XCTestCase {
 
     func test_get_should_call_http_get_client_with_correct_url(){
         let url: URL = URL(string: "http://any-url")!
@@ -52,7 +52,7 @@ final class GetDeputadoTest: XCTestCase {
 
 }
 
-extension GetDeputadoTest {
+extension RemoteGetDeputadoTest {
     
     func makeSutRemoteGetDeputados(url: URL = URL(string: "http://any-url")!) -> (sut: RemoteGetDeputados, httpClientSpy: HttpGetClientSpy){
         let httpClientSpy = HttpGetClientSpy()

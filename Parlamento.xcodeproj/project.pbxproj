@@ -21,7 +21,7 @@
 		BB2CD0AE2A293A9800EA736B /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0AD2A293A9800EA736B /* DomainError.swift */; };
 		BB2CD0B12A293BA200EA736B /* GetDeputadoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0B02A293BA200EA736B /* GetDeputadoProtocol.swift */; };
 		BB2CD0BF2A293C2D00EA736B /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0B72A293C2C00EA736B /* Data.framework */; };
-		BB2CD0C42A293C2D00EA736B /* GetDeputadoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */; };
+		BB2CD0C42A293C2D00EA736B /* RemoteGetDeputadoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0C32A293C2D00EA736B /* RemoteGetDeputadoTest.swift */; };
 		BB2CD0CE2A293E5200EA736B /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0CD2A293E5200EA736B /* HttpError.swift */; };
 		BB2CD0D12A293E9E00EA736B /* RemoteGetDeputado.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2CD0D02A293E9E00EA736B /* RemoteGetDeputado.swift */; };
 		BB2CD0D32A293ED900EA736B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB2CD0922A29201700EA736B /* Domain.framework */; };
@@ -147,7 +147,7 @@
 		BB2CD0B02A293BA200EA736B /* GetDeputadoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeputadoProtocol.swift; sourceTree = "<group>"; };
 		BB2CD0B72A293C2C00EA736B /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2CD0BE2A293C2D00EA736B /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeputadoTest.swift; sourceTree = "<group>"; };
+		BB2CD0C32A293C2D00EA736B /* RemoteGetDeputadoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetDeputadoTest.swift; sourceTree = "<group>"; };
 		BB2CD0CD2A293E5200EA736B /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		BB2CD0D02A293E9E00EA736B /* RemoteGetDeputado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetDeputado.swift; sourceTree = "<group>"; };
 		BB2CD0D92A29416C00EA736B /* HttpGetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGetClient.swift; sourceTree = "<group>"; };
@@ -329,7 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2CD10C2A295BEB00EA736B /* Factories */,
-				BB2CD0C32A293C2D00EA736B /* GetDeputadoTest.swift */,
+				BB2CD0C32A293C2D00EA736B /* RemoteGetDeputadoTest.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -378,9 +378,9 @@
 		BB2CD0EF2A294F2E00EA736B /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB2CD0F02A294F2E00EA736B /* URLSessionAdapterTests.swift */,
 				BB32DB3A2A2A348500ABB5B8 /* Helper */,
 				BB32DB352A2A342500ABB5B8 /* Mock */,
+				BB2CD0F02A294F2E00EA736B /* URLSessionAdapterTests.swift */,
 			);
 			path = InfraTests;
 			sourceTree = "<group>";
@@ -806,7 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2CD10E2A295C3F00EA736B /* DeputadoFactory.swift in Sources */,
-				BB2CD0C42A293C2D00EA736B /* GetDeputadoTest.swift in Sources */,
+				BB2CD0C42A293C2D00EA736B /* RemoteGetDeputadoTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

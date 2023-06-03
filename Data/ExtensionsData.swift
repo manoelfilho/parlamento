@@ -17,9 +17,4 @@ public extension Data {
         return nil
     }
     
-    func toJson() -> [String: Any]? {
-        return try? JSONSerialization.jsonObject(with: self, options: .allowFragments) as? [String: Any]
-    }
-
-    
 }
