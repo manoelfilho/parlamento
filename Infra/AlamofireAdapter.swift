@@ -13,7 +13,6 @@ public final class AlamofireAdapter: HttpGetClient {
     public func get(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         
         session.request(url, method: .get).responseData { [weak self] dataResponse in
-            
             guard self != nil else { return }
             
             guard let statusCode = dataResponse.response?.statusCode else {
@@ -21,33 +20,34 @@ public final class AlamofireAdapter: HttpGetClient {
             }
             
             switch dataResponse.result {
-            
-            case .failure: completion(.failure(.unexpected))
-            
-            case .success(let data):
                 
-                switch statusCode {
+                case .failure(_):
+                    completion(.failure(.networkError))
                     
-                    case 204:
-                        completion(.success(nil))
-                    case 200...299:
-                        completion(.success(data))
-                    case 401:
-                        completion(.failure(.unauthorized))
-                    case 403:
-                        completion(.failure(.forbiden))
-                    case 400...499:
-                        completion(.failure(.badRequest))
-                    case 500...599:
-                        completion(.failure(.serverError))
-                    default:
-                        completion(.failure(.unexpected))
-                }
-                
+                case .success(let data):
+                    switch statusCode {
+                        
+                        case 200..<300:
+                            if statusCode == 204 {
+                                completion(.success(nil))
+                            } else {
+                                completion(.success(data))
+                            }
+                            
+                        case 400..<500:
+                            completion(.failure(.unauthorized))
+                            
+                        case 500..<600:
+                            completion(.failure(.serverError))
+                            
+                        default:
+                            completion(.failure(.unexpected))
+                    }
             }
             
         }
         
     }
+
     
 }

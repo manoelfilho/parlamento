@@ -29,18 +29,17 @@ public final class RemoteGetDeputado: GetDeputadoProtocol {
             case .failure(let error):
                 
                 switch error{
+                    
                     case .unexpected:
                         completion(.failure(.unexpected))
-                    case .badRequest:
-                        completion(.failure(.badRequest))
                     case .unauthorized:
-                        completion(.failure(.unauthorized))
-                    case .apiError:
-                        completion(.failure(.apiError))
-                    case .forbiden:
-                        completion(.failure(.forbiden))
+                        completion(.failure(.unexpected))
                     case .serverError:
-                        completion(.failure(.serverError))
+                        completion(.failure(.unexpected))
+                    case .networkError:
+                        completion(.failure(.unexpected))
+                    case .emptyResponse:
+                        completion(.failure(.unexpected))
                 }
                 
             }
