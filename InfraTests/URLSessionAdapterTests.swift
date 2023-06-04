@@ -17,7 +17,7 @@ final class URLSessionAdapterTests: XCTestCase {
         
     }
     
-    func test_success_respose(){
+    func testURLSessionAdapter_FinishWithSuccess_WhenURLProtocolReturnCorrectData(){
         
         let data = makeValidData()
         let apiUrl = makeUrl()
@@ -38,6 +38,31 @@ final class URLSessionAdapterTests: XCTestCase {
             self.expectation.fulfill()
         }
         wait(for: [expectation], timeout: 1.0)
+    }
+    
+    func testURLSessionAdapter_FinishFinishWithFailure_WhenURLProtocolReturnError(){
+        
+        let data = makeInvalidData()
+        let apiUrl = makeUrl()
+        
+        MockURLProtocol.requestHandler = { request in
+            let response = HTTPURLResponse(url: apiUrl, statusCode: 500, httpVersion: nil, headerFields: nil)!
+            return (response, data)
+        }
+        
+        sut.get(to: apiUrl) { result in
+            
+            switch result {
+                case .success(_):
+                    XCTFail("Error was expected and data was received")
+                case .failure(let error):
+                    XCTAssertNotNil(error)
+            }
+            self.expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
+        
     }
 
 }
