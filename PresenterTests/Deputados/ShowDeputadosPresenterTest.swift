@@ -36,7 +36,7 @@ final class ShowDeputadosPresenterTest: XCTestCase {
     func testGetDeputados_WhenServiceReturnsFailure_ShouldCallShowErrorAndToggleLoading() {
         // Arrange
         let exp = expectation(description: "waiting")
-        let deputados: [Deputado] = []
+        let message = "error getting deputados"
         
         // Act
         let (_, getDeputadosSpy, showDeputadosStub) = makeSut()
@@ -46,7 +46,7 @@ final class ShowDeputadosPresenterTest: XCTestCase {
                 case .success(_):
                     XCTFail("Expected error and data received")
                 case .failure(_):
-                    showDeputadosStub.showDeputados(with: deputados)
+                    showDeputadosStub.showErrorGettingDeputados(message: message)
                     showDeputadosStub.toggleLoading()
             }
             exp.fulfill()
@@ -55,9 +55,43 @@ final class ShowDeputadosPresenterTest: XCTestCase {
         getDeputadosSpy.completeWithDomainError(.unexpected)
         
         // Assert
-        XCTAssertTrue(showDeputadosStub.showDeputadosCalled)
+        XCTAssertTrue(showDeputadosStub.showErrorCalled)
         XCTAssertTrue(showDeputadosStub.toggleLoadingCalled)
         
+        wait(for: [exp], timeout: 1)
+    }
+
+    func testGetDeputados_WhenServiceReturnsSucces_ShouldCallShowDeputadosProtocol_WithCorrectValues() {
+        // Arrange
+        let exp = expectation(description: "waiting")
+        let deputados: [Deputado] = makeCollectionDeputados()
+        
+        // Act
+        let (sut, getDeputadosSpy, showDeputadosStub) = makeSut()
+        sut.getDeputados()
+        
+        getDeputadosSpy.completeWithDeputados(deputados)
+        exp.fulfill()
+        
+        // Assert
+        XCTAssertEqual(showDeputadosStub.deputados, deputados)
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func testGetDeputados_WhenServiceReturnsFailure_ShouldCallShowError_WithCorrectMessage() {
+        // Arrange
+        let exp = expectation(description: "waiting")
+        let message = "Erro no retorno dos dados"
+        
+        // Act
+        let (sut, getDeputadosSpy, showDeputadosStub) = makeSut()
+        sut.getDeputados()
+        
+        getDeputadosSpy.completeWithDomainError(.unexpected)
+        exp.fulfill()
+        
+        // Assert
+        XCTAssertEqual(showDeputadosStub.messageError, message)
         wait(for: [exp], timeout: 1)
     }
 
@@ -101,11 +135,16 @@ class ShowDeputadosStub: ShowDeputadosProtocol {
     var showErrorCalled = false
     var toggleLoadingCalled = false
     
+    var deputados: [Deputado] = []
+    var messageError: String = ""
+    
     func showDeputados(with deputados: [Deputado]) {
+        self.deputados = deputados
         showDeputadosCalled = true
     }
     
     func showErrorGettingDeputados(message: String) {
+        self.messageError = message
         showErrorCalled = true
     }
     

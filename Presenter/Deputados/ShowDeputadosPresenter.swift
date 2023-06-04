@@ -21,7 +21,7 @@ class ShowDeputadosPresenter {
             case .success(let deputados):
                 self?.showDeputadosProtocol?.showDeputados(with: deputados)
             case .failure(_):
-                self?.showDeputadosProtocol?.showErrorGettingDeputados(message: "Erro no retorno dos dados")
+                self?.showDeputadosProtocol?.showErrorGettingDeputados(with: "Erro no retorno dos dados")
             }
             self?.showDeputadosProtocol?.toggleLoading()
         }
