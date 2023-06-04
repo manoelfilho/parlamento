@@ -46,7 +46,7 @@ final class ShowDeputadosPresenterTest: XCTestCase {
                 case .success(_):
                     XCTFail("Expected error and data received")
                 case .failure(_):
-                    showDeputadosStub.showErrorGettingDeputados(message: message)
+                    showDeputadosStub.showErrorGettingDeputados(with: message)
                     showDeputadosStub.toggleLoading()
             }
             exp.fulfill()
