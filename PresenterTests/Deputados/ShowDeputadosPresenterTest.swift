@@ -143,7 +143,7 @@ class ShowDeputadosStub: ShowDeputadosProtocol {
         showDeputadosCalled = true
     }
     
-    func showErrorGettingDeputados(message: String) {
+    func showErrorGettingDeputados(with message: String) {
         self.messageError = message
         showErrorCalled = true
     }
